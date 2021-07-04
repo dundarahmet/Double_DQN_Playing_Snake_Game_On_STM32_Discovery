@@ -1,7 +1,7 @@
-## Introduction
+# Introduction
 I create a project that learn how to play a snake game on the STM32F407VG Discovery Board. 
 
-# Model Information: 
+## Model Information: 
 In the project, I used Double Deep Q learning with replay memory and mini batch. 
   1. Replay size is 3966 because of the limited RAM
   2. Mini-batch size is 32.
@@ -10,9 +10,8 @@ In the project, I used Double Deep Q learning with replay memory and mini batch.
     I. learning rate: 0.000025
     II. momentum: 0
   5. Hard Update is used for updating Target network every 1e4 times.
-  6. 
 
-# Input Information
+## Input Information
 The input of the model is array with 12 elements. Each of the element represent special information.
 These information is following:
   0. The Food is above the snake (1: Yes/True, 0: No/False)
@@ -28,7 +27,7 @@ These information is following:
   10. The snake's head will be moving to the downward (1: Yes/True, 0: No/False)
   11. The snake's head will be moving to the left (1: Yes/True, 0: No/False)
 
-# Network Information
+## Network Information
 ```
 |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
 |Dense Layer: Input=12, Output=32|
@@ -58,4 +57,17 @@ These information is following:
 |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
 |           Q-Values             |
 |________________________________|
+```
+
+## Screen Information:
+Nokia 5110 LCD screen is used in the project. The connection is following:
+```
+RST of the LCD Screen must be connected to PB0
+CE of the LCD Screen must be connected to PB12
+D/C of the LCD Screen must be connected to PB1
+DIN of the LCD Screen must be connected to PB15
+CLK of the LCD Screen must be connected toPB13
+VCC of the LCD Screen must be connected to PB5
+BL of the LCD Screen must be connected to PB7
+GND of the LCD Screen must be connected to GND pin of the discovery board
 ```
