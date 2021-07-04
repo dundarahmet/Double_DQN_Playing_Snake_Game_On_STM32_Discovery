@@ -155,13 +155,6 @@ int main (void) {
 					}
 					model_nn() ;
 
-//					for (general_row = 0; general_row < 4; general_row++) {
-//						if (general_row == replay_action[rng_holder]) {
-//							target_output[general_row] = modification_value ;
-//						} else {
-//							target_output[general_row] = model_output[general_row] ;
-//						}
-//					}
 					for (general_row = 0; general_row < 4; general_row++) {
 						if (general_row == replay_action[rng_holder]) {
 							backprop_input[general_row] += ((model_output[general_row] - modification_value) / (float)2.) ;
