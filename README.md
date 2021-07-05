@@ -1,5 +1,5 @@
 # Introduction
-I create a project that learn how to play a snake game on the STM32F407VG Discovery Board. 
+I created an AI that learns how to play a snake game on the STM32F407VG Discovery Board. 
 
 ## Model Information: 
 In the project, I used Double Deep Q learning with replay memory and mini batch. 
